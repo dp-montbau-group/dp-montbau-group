@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", loadProject);
 
+window.addEventListener("languageChanged", () => {
+    loadProject();
+});
+
 
 async function loadProject() {
 
@@ -8,25 +12,37 @@ async function loadProject() {
     const id = new URLSearchParams(location.search).get("id");
 
 
+    /*
+     * Získání aktuálního jazyka
+     */
+    const language =
+        localStorage.getItem("language") || "cs";
+
+    const t =
+        translations[language] || translations.cs;
+
+
+    /*
+     * Pokud není ID zakázky
+     */
     if (!id) {
 
         c.innerHTML = `
             <div class="projects-empty">
 
                 <h3>
-                    Nabídka nebyla nalezena.
+                    ${t.offerNotFound}
                 </h3>
 
                 <p>
-                    Požadovaná pracovní nabídka neexistuje
-                    nebo nebyl zadán správný odkaz.
+                    ${t.offerNotFoundText}
                 </p>
 
                 <a
                     class="btn btn-red"
-                    href="index.html#kontakt"
+                    href="projekty.html"
                 >
-                    Zpět na aktuální zakázky
+                    ${t.backToProjects}
                     <span>→</span>
                 </a>
 
@@ -54,15 +70,24 @@ async function loadProject() {
         }
 
 
+        /*
+         * Titulek stránky
+         */
         document.title =
             `${p.title} | DP Montbau Group s.r.o.`;
 
 
+        /*
+         * Termín zakázky
+         */
         const dates = p.end_date
             ? `${formatDate(p.start_date)} – ${formatDate(p.end_date)}`
-            : `${formatDate(p.start_date)} – dosud`;
+            : `${formatDate(p.start_date)} – ${t.untilNow}`;
 
 
+        /*
+         * Obrázek
+         */
         const image = p.image_url
             ? `
                 <div class="detail-image">
@@ -85,6 +110,9 @@ async function loadProject() {
             `;
 
 
+        /*
+         * Hlavní obsah
+         */
         c.innerHTML = `
 
             <!-- ==========================================
@@ -94,7 +122,7 @@ async function loadProject() {
             <div class="project-detail-header">
 
                 <p class="eyebrow">
-                    AKTUÁLNÍ ZAKÁZKA
+                    ${t.currentProjectEyebrow}
                 </p>
 
 
@@ -126,7 +154,7 @@ async function loadProject() {
                     <span class="detail-meta-item">
 
                         <strong>
-                            Typ práce
+                            ${t.workType}
                         </strong>
 
                         ${escapeHtml(
@@ -139,7 +167,7 @@ async function loadProject() {
                     <span class="detail-meta-item">
 
                         <strong>
-                            Termín zakázky
+                            ${t.projectTerm}
                         </strong>
 
                         ${escapeHtml(dates)}
@@ -150,7 +178,7 @@ async function loadProject() {
                     <span class="detail-meta-item">
 
                         <strong>
-                            Počet pracovníků
+                            ${t.workersCount}
                         </strong>
 
                         ${escapeHtml(
@@ -182,11 +210,11 @@ async function loadProject() {
                 <div class="detail-section-heading">
 
                     <p class="eyebrow">
-                        PODROBNOSTI ZAKÁZKY
+                        ${t.projectDetailsEyebrow}
                     </p>
 
                     <h2>
-                        Informace k nabídce
+                        ${t.offerInformation}
                     </h2>
 
                 </div>
@@ -201,8 +229,7 @@ async function loadProject() {
                         `
                         : `
                             <div class="detail-text">
-                                Podrobnosti k této zakázce
-                                momentálně nejsou k dispozici.
+                                ${t.noDescription}
                             </div>
                         `
                 }
@@ -220,17 +247,15 @@ async function loadProject() {
                 <div>
 
                     <p class="eyebrow">
-                        MÁTE ZÁJEM?
+                        ${t.interestedEyebrow}
                     </p>
 
                     <h2>
-                        Chcete se přidat
-                        k této zakázce?
+                        ${t.interestedTitle}
                     </h2>
 
                     <p>
-                        Ozvěte se nám a domluvíme
-                        další podrobnosti spolupráce.
+                        ${t.interestedText}
                     </p>
 
                 </div>
@@ -240,7 +265,9 @@ async function loadProject() {
                     class="btn btn-red"
                     href="index.html#kontakt"
                 >
-                    Kontaktujte nás
+                    <span>
+                        ${t.contactUs}
+                    </span>
                     <span>→</span>
                 </a>
 
@@ -257,19 +284,20 @@ async function loadProject() {
             <div class="projects-empty">
 
                 <h3>
-                    Nabídku nebylo možné načíst.
+                    ${t.offerLoadError}
                 </h3>
 
                 <p>
-                    Zkontroluj odkaz na nabídku
-                    a nastavení Supabase.
+                    ${t.offerLoadErrorText}
                 </p>
 
                 <a
                     class="btn btn-red"
                     href="projekty.html"
                 >
-                    Zpět na aktuální zakázky
+                    <span>
+                        ${t.backToProjects}
+                    </span>
                     <span>→</span>
                 </a>
 

@@ -1,9 +1,23 @@
 document.addEventListener("DOMContentLoaded", loadProjects);
 
+window.addEventListener("languageChanged", () => {
+    loadProjects();
+});
+
 
 async function loadProjects() {
 
     const g = document.getElementById("projects-grid");
+
+    /*
+     * Aktuální jazyk
+     */
+    const language =
+        localStorage.getItem("language") || "cs";
+
+    const t =
+        translations[language] || translations.cs;
+
 
     try {
 
@@ -26,18 +40,20 @@ async function loadProjects() {
         }
 
 
+        /*
+         * Žádné projekty
+         */
         if (!data?.length) {
 
             g.innerHTML = `
                 <div class="projects-empty">
 
                     <h3>
-                        Zatím nejsou zveřejněny žádné projekty.
+                        ${t.noProjects}
                     </h3>
 
                     <p>
-                        Projekty se zde zobrazí po jejich přidání
-                        v administraci.
+                        ${t.noProjectsText}
                     </p>
 
                 </div>
@@ -47,6 +63,9 @@ async function loadProjects() {
         }
 
 
+        /*
+         * Vykreslení projektů
+         */
         g.innerHTML = data.map(p => {
 
             const image = p.image_url
@@ -64,9 +83,19 @@ async function loadProjects() {
                 `;
 
 
+            /*
+             * Termín
+             */
             const dates = p.end_date
                 ? `${formatDate(p.start_date)} – ${formatDate(p.end_date)}`
-                : `${formatDate(p.start_date)} – dosud`;
+                : `${formatDate(p.start_date)} – ${t.untilNow}`;
+
+
+            /*
+             * Počet pracovníků
+             */
+            const workers =
+                String(p.workers || 0);
 
 
             return `
@@ -74,7 +103,7 @@ async function loadProjects() {
 
                     <a
                         href="projekt.html?id=${encodeURIComponent(p.id)}"
-                        aria-label="Zobrazit projekt ${escapeHtml(p.title)}"
+                        aria-label="${t.viewProject} ${escapeHtml(p.title)}"
                     >
 
                         <div class="project-card-image">
@@ -88,7 +117,7 @@ async function loadProjects() {
 
                             <span class="project-card-category">
                                 ${escapeHtml(
-                                    p.work_type || "Realizace"
+                                    p.work_type || t.realization
                                 )}
                             </span>
 
@@ -112,10 +141,8 @@ async function loadProjects() {
                                 </span>
 
                                 <span>
-                                    ${escapeHtml(
-                                        String(p.workers || 0)
-                                    )}
-                                    pracovníků
+                                    ${escapeHtml(workers)}
+                                    ${t.workers}
                                 </span>
 
                             </div>
@@ -132,7 +159,7 @@ async function loadProjects() {
 
                                 <span class="project-card-link">
 
-                                    Zobrazit projekt
+                                    ${t.viewProject}
 
                                     <span>
                                         →
@@ -160,11 +187,11 @@ async function loadProjects() {
             <div class="projects-empty">
 
                 <h3>
-                    Nepodařilo se načíst projekty.
+                    ${t.projectsLoadError}
                 </h3>
 
                 <p>
-                    Zkontroluj nastavení Supabase a RLS.
+                    ${t.projectsLoadErrorText}
                 </p>
 
             </div>

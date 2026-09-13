@@ -4824,3 +4824,45 @@ p {
     height: auto;
     object-fit: contain;
 }
+
+/* Oprava velikosti CTA tlačítka v navigaci */
+.header-cta {
+    font-size: 14px !important;
+    line-height: 1 !important;
+    padding: 14px 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    white-space: nowrap !important;
+}
+
+.header-cta span {
+    font-size: inherit !important;
+    line-height: 1 !important;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-switcher button {
+    width: 28px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-switcher button img {
+    display: block;
+    width: 28px;
+    height: 19px;
+    object-fit: cover;
+    border-radius: 2px;
+}

@@ -20,6 +20,8 @@
 
     <title>Aktuální zakázka | DP Montbau Group s.r.o.</title>
 
+    <script src="js/translations.js"></script>
+
 </head>
 
 
@@ -33,9 +35,9 @@
 
     <div class="container header-inner">
 
-       <a class="logo" href="index.html">
-    <img src="images/logo-white.png" alt="DP Montbau Group">
-</a>
+        <a class="logo" href="index.html">
+            <img src="images/logo-white.png" alt="DP Montbau Group">
+        </a>
 
 
         <button
@@ -49,41 +51,91 @@
 
         <nav class="nav">
 
-            <a href="index.html">
+            <a
+                href="index.html"
+                data-i18n="navHome"
+            >
                 Úvod
             </a>
 
-            <a href="index.html#o-nas">
+            <a
+                href="index.html#o-nas"
+                data-i18n="navAbout"
+            >
                 O nás
             </a>
 
-            <a href="index.html#sluzby">
+            <a
+                href="index.html#sluzby"
+                data-i18n="navServices"
+            >
                 Služby
             </a>
 
             <a
                 class="active"
                 href="projekty.html"
+                data-i18n="navProjects"
             >
-                Realizace
+                Zakázky
             </a>
 
-            <a href="index.html#reference">
+            <a
+                href="index.html#reference"
+                data-i18n="navReferences"
+            >
                 Reference
             </a>
 
-            <a href="index.html#kontakt">
+            <a
+                href="index.html#kontakt"
+                data-i18n="navContact"
+            >
                 Kontakt
             </a>
 
         </nav>
 
 
+      <div class="language-switcher">
+
+    <button
+        type="button"
+        data-lang="cs"
+        aria-label="Čeština"
+        title="Čeština"
+    >
+        <img src="images/flags/cz.svg" alt="CZ">
+    </button>
+
+    <button
+        type="button"
+        data-lang="en"
+        aria-label="English"
+        title="English"
+    >
+        <img src="images/flags/gb.svg" alt="EN">
+    </button>
+
+    <button
+        type="button"
+        data-lang="de"
+        aria-label="Deutsch"
+        title="Deutsch"
+    >
+        <img src="images/flags/de.svg" alt="DE">
+    </button>
+
+</div>
+
+
         <a
             class="header-cta"
             href="index.html#kontakt"
         >
-            Nezávazná poptávka
+            <span data-i18n="navCta">
+                Nezávazná poptávka
+            </span>
             <span>→</span>
         </a>
 
@@ -105,11 +157,14 @@
 
     <div class="container">
 
+
         <a
             class="back-link"
             href="projekty.html"
         >
-            ← Zpět na aktuální zakázky
+            <span data-i18n="backToProjects">
+                ← Zpět na aktuální zakázky
+            </span>
         </a>
 
 
@@ -118,7 +173,10 @@
             class="project-detail"
         >
 
-            <div class="loading">
+            <div
+                class="loading"
+                data-i18n="loadingOffer"
+            >
                 Načítám nabídku…
             </div>
 
@@ -144,12 +202,15 @@
 
         <div class="footer-brand">
 
-           <a class="logo" href="index.html">
-        <img src="images/logo-white.png" alt="DP Montbau Group">
-        </a>
+            <a class="logo" href="index.html">
+                <img
+                    src="images/logo-white.png"
+                    alt="DP Montbau Group"
+                >
+            </a>
 
 
-            <p>
+            <p data-i18n="footerText">
                 Stavíme. Montujeme. Tvoříme.
             </p>
 
@@ -159,24 +220,40 @@
 
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerLinks">
                 Rychlé odkazy
             </h3>
 
-            <a href="index.html">
+
+            <a
+                href="index.html"
+                data-i18n="navHome"
+            >
                 Úvod
             </a>
 
-            <a href="index.html#o-nas">
+
+            <a
+                href="index.html#o-nas"
+                data-i18n="navAbout"
+            >
                 O nás
             </a>
 
-            <a href="index.html#sluzby">
+
+            <a
+                href="index.html#sluzby"
+                data-i18n="navServices"
+            >
                 Služby
             </a>
 
-            <a href="projekty.html">
-                Realizace
+
+            <a
+                href="projekty.html"
+                data-i18n="navProjects"
+            >
+                Zakázky
             </a>
 
         </div>
@@ -185,17 +262,20 @@
 
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerContact">
                 Kontakt
             </h3>
+
 
             <a href="tel:+420797616593">
                 +420 797 616 593
             </a>
 
+
             <a href="mailto:info@dp-montbau-group.cz">
                 info@dp-montbau-group.cz
             </a>
+
 
             <p>
                 DP Montbau Group s.r.o.
@@ -207,9 +287,10 @@
 
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerFollow">
                 Sledujte nás
             </h3>
+
 
             <div class="social-links">
 
@@ -220,12 +301,14 @@
                     f
                 </a>
 
+
                 <a
                     href="#"
                     aria-label="Instagram"
                 >
                     ◎
                 </a>
+
 
                 <a
                     href="#"
@@ -245,22 +328,35 @@
     <div class="container footer-bottom">
 
         <span>
+
             © <span id="year"></span>
             DP Montbau Group s.r.o.
+
         </span>
 
 
         <div>
 
-            <a href="#">
+            <a
+                href="#"
+                data-i18n="footerPrivacy"
+            >
                 Ochrana osobních údajů
             </a>
 
-            <a href="#">
+
+            <a
+                href="#"
+                data-i18n="footerCookies"
+            >
                 Cookies
             </a>
 
-            <a href="admin.html">
+
+            <a
+                href="admin.html"
+                data-i18n="footerAdmin"
+            >
                 Administrace
             </a>
 

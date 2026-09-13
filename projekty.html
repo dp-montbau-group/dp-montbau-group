@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>Aktuální zakázky | DP Montbau Group s.r.o.</title>
+
+    <script src="js/translations.js"></script>
 </head>
 
 
@@ -32,8 +34,8 @@
     <div class="container header-inner">
 
         <a class="logo" href="index.html">
-    <img src="images/logo-white.png" alt="DP Montbau Group">
-</a>
+            <img src="images/logo-white.png" alt="DP Montbau Group">
+        </a>
 
 
         <button
@@ -47,43 +49,87 @@
 
         <nav class="nav">
 
-            <a href="index.html">
+            <a
+                href="index.html"
+                data-i18n="navHome"
+            >
                 Úvod
             </a>
 
-            <a href="index.html#o-nas">
+            <a
+                href="index.html#o-nas"
+                data-i18n="navAbout"
+            >
                 O nás
             </a>
 
-            <a href="index.html#sluzby">
+            <a
+                href="index.html#sluzby"
+                data-i18n="navServices"
+            >
                 Služby
             </a>
 
             <a
                 class="active"
                 href="projekty.html"
+                data-i18n="navProjects"
             >
                 Zakázky
             </a>
 
-            <a href="index.html#reference">
+            <a
+                href="index.html#reference"
+                data-i18n="navReferences"
+            >
                 Reference
             </a>
 
-            <a href="index.html#kontakt">
+            <a
+                href="index.html#kontakt"
+                data-i18n="navContact"
+            >
                 Kontakt
             </a>
 
         </nav>
 
 
-        <a
-            class="header-cta"
-            href="index.html#kontakt"
-        >
-            Nezávazná poptávka
-            <span>→</span>
-        </a>
+    <div class="language-switcher">
+
+    <button
+        type="button"
+        data-lang="cs"
+        aria-label="Čeština"
+        title="Čeština"
+    >
+        <img src="images/flags/cz.svg" alt="CZ">
+    </button>
+
+    <button
+        type="button"
+        data-lang="en"
+        aria-label="English"
+        title="English"
+    >
+        <img src="images/flags/gb.svg" alt="EN">
+    </button>
+
+    <button
+        type="button"
+        data-lang="de"
+        aria-label="Deutsch"
+        title="Deutsch"
+    >
+        <img src="images/flags/de.svg" alt="DE">
+    </button>
+
+</div>
+
+<a class="header-cta" href="index.html#kontakt">
+    <span data-i18n="navCta">Nezávazná poptávka</span>
+    <span>→</span>
+</a>
 
     </div>
 
@@ -103,15 +149,18 @@
 
     <div class="container page-hero-content">
 
-        <p class="eyebrow">
+        <p
+            class="eyebrow"
+            data-i18n="projectsPageEyebrow"
+        >
             DP MONTBAU GROUP
         </p>
 
-        <h1>
+        <h1 data-i18n="projectsPageHeading">
             AKTUÁLNÍ <span>ZAKÁZKY.</span>
         </h1>
 
-        <p>
+        <p data-i18n="projectsPageIntro">
             Aktuální pracovní nabídky a zakázky
             pro zkušené montéry a další profese.
         </p>
@@ -134,17 +183,20 @@
 
             <div>
 
-                <p class="eyebrow">
+                <p
+                    class="eyebrow"
+                    data-i18n="jobOffersEyebrow"
+                >
                     PRACOVNÍ NABÍDKY
                 </p>
 
-                <h2>
+                <h2 data-i18n="currentProjectsTitle">
                     Aktuální zakázky
                 </h2>
 
             </div>
 
-            <p>
+            <p data-i18n="currentProjectsText">
                 Prohlédněte si aktuální pracovní nabídky
                 a zakázky. U každé nabídky najdete
                 informace o místě výkonu práce, termínu,
@@ -159,7 +211,10 @@
             class="projects-grid"
         >
 
-            <div class="loading">
+            <div
+                class="loading"
+                data-i18n="loadingOffers"
+            >
                 Načítám nabídky…
             </div>
 
@@ -181,16 +236,19 @@
 
         <div>
 
-            <p class="eyebrow">
+            <p
+                class="eyebrow"
+                data-i18n="cooperationEyebrow"
+            >
                 MÁTE ZÁJEM O SPOLUPRÁCI?
             </p>
 
-            <h2>
+            <h2 data-i18n="cooperationTitle">
                 Hledáte práci<br>
                 na zajímavé zakázce?
             </h2>
 
-            <p>
+            <p data-i18n="cooperationText">
                 Prohlédněte si aktuální nabídky
                 nebo se nám ozvěte přímo.
             </p>
@@ -202,7 +260,9 @@
             class="btn btn-red"
             href="index.html#kontakt"
         >
-            Kontaktujte nás
+            <span data-i18n="contactUs">
+                Kontaktujte nás
+            </span>
             <span>→</span>
         </a>
 
@@ -225,11 +285,11 @@
 
         <div class="footer-brand">
 
-         <a class="logo" href="index.html">
-        <img src="images/logo-white.png" alt="DP Montbau Group">
-        </a>
+            <a class="logo" href="index.html">
+                <img src="images/logo-white.png" alt="DP Montbau Group">
+            </a>
 
-            <p>
+            <p data-i18n="footerText">
                 Stavíme. Montujeme. Tvoříme.
             </p>
 
@@ -238,23 +298,35 @@
 
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerLinks">
                 Rychlé odkazy
             </h3>
 
-            <a href="index.html">
+            <a
+                href="index.html"
+                data-i18n="navHome"
+            >
                 Úvod
             </a>
 
-            <a href="index.html#o-nas">
+            <a
+                href="index.html#o-nas"
+                data-i18n="navAbout"
+            >
                 O nás
             </a>
 
-            <a href="index.html#sluzby">
+            <a
+                href="index.html#sluzby"
+                data-i18n="navServices"
+            >
                 Služby
             </a>
 
-            <a href="projekty.html">
+            <a
+                href="projekty.html"
+                data-i18n="navProjects"
+            >
                 Zakázky
             </a>
 
@@ -263,7 +335,7 @@
 
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerContact">
                 Kontakt
             </h3>
 
@@ -284,7 +356,7 @@
 
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerFollow">
                 Sledujte nás
             </h3>
 
@@ -327,15 +399,24 @@
 
         <div>
 
-            <a href="#">
+            <a
+                href="#"
+                data-i18n="footerPrivacy"
+            >
                 Ochrana osobních údajů
             </a>
 
-            <a href="#">
+            <a
+                href="#"
+                data-i18n="footerCookies"
+            >
                 Cookies
             </a>
 
-            <a href="admin.html">
+            <a
+                href="admin.html"
+                data-i18n="footerAdmin"
+            >
                 Administrace
             </a>
 

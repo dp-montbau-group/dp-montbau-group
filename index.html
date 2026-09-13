@@ -18,8 +18,8 @@
 
     <title>DP Montbau Group s.r.o. | Stavíme. Montujeme. Tvoříme.</title>
     <script src="js/translations.js"></script>
-
 </head>
+
 
 
 <body>
@@ -37,6 +37,7 @@
         </a>
 
 
+
         <button
             class="nav-toggle"
             aria-label="Otevřít menu"
@@ -46,42 +47,73 @@
         </button>
 
 
+
         <nav class="nav">
 
-            <a class="active" href="index.html">
+            <a class="active" href="index.html" data-i18n="navHome">
                 Úvod
             </a>
 
-            <a href="#o-nas">
+            <a href="#o-nas" data-i18n="navAbout">
                 O nás
             </a>
 
-            <a href="#sluzby">
+            <a href="#sluzby" data-i18n="navServices">
                 Služby
             </a>
 
-            <a href="projekty.html">
+            <a href="projekty.html" data-i18n="navProjects">
                 Zakázky
             </a>
 
-            <a href="#reference">
+            <a href="#reference" data-i18n="navReferences">
                 Reference
             </a>
 
-            <a href="#kontakt">
+            <a href="#kontakt" data-i18n="navContact">
                 Kontakt
             </a>
 
         </nav>
-<div class="language-switcher">
-    <button type="button" data-lang="cs">CZ</button>
-    <button type="button" data-lang="en">EN</button>
-    <button type="button" data-lang="de">DE</button>
+
+
+      <div class="language-switcher">
+
+    <button
+        type="button"
+        data-lang="cs"
+        aria-label="Čeština"
+        title="Čeština"
+    >
+        <img src="images/flags/cz.svg" alt="CZ">
+    </button>
+
+    <button
+        type="button"
+        data-lang="en"
+        aria-label="English"
+        title="English"
+    >
+        <img src="images/flags/gb.svg" alt="EN">
+    </button>
+
+    <button
+        type="button"
+        data-lang="de"
+        aria-label="Deutsch"
+        title="Deutsch"
+    >
+        <img src="images/flags/de.svg" alt="DE">
+    </button>
+
 </div>
+
+
 
         <a
             class="header-cta"
             href="#kontakt"
+            data-i18n="navCta"
         >
             Nezávazná poptávka
             <span>→</span>
@@ -90,6 +122,8 @@
     </div>
 
 </header>
+
+
 
 
 
@@ -110,18 +144,21 @@
         </p>
 
 
-        <h1>
+
+        <h1 data-i18n="heroTitle">
             STAVÍME.<br>
             MONTUJEME.<br>
             <span>TVOŘÍME.</span>
         </h1>
 
 
-        <p class="hero-text">
+
+        <p class="hero-text" data-i18n="heroText">
             Profesionální stavební a montážní práce
             pro průmysl, komerční objekty
             i soukromé investory.
         </p>
+
 
 
         <div class="hero-buttons">
@@ -129,15 +166,18 @@
             <a
                 class="btn btn-red"
                 href="projekty.html"
+                data-i18n="heroProjects"
             >
                 Naše realizace
                 <span>→</span>
             </a>
 
 
+
             <a
                 class="btn btn-outline"
                 href="#kontakt"
+                data-i18n="heroContact"
             >
                 Kontakt
                 <span>→</span>
@@ -151,6 +191,8 @@
 
 
 
+
+
 <!-- ==================================================
      BENEFITS
 ================================================== -->
@@ -160,22 +202,24 @@
     <div class="container benefits-grid">
 
 
+
         <article class="benefit">
 
             <div class="benefit-icon">
                 ◇
             </div>
 
-            <h3>
+            <h3 data-i18n="benefitQuality">
                 Kvalita
             </h3>
 
-            <p>
+            <p data-i18n="benefitQualityText">
                 Držíme vysoké standardy
                 a dbáme na detail.
             </p>
 
         </article>
+
 
 
         <article class="benefit">
@@ -184,16 +228,17 @@
                 ◫
             </div>
 
-            <h3>
+            <h3 data-i18n="benefitExperience">
                 Zkušenosti
             </h3>
 
-            <p>
+            <p data-i18n="benefitExperienceText">
                 Roky praxe v oboru
                 stavebnictví a montáží.
             </p>
 
         </article>
+
 
 
         <article class="benefit">
@@ -202,16 +247,17 @@
                 ◇
             </div>
 
-            <h3>
+            <h3 data-i18n="benefitReliability">
                 Spolehlivost
             </h3>
 
-            <p>
+            <p data-i18n="benefitReliabilityText">
                 Dodržujeme termíny
                 a naše slovo má hodnotu.
             </p>
 
         </article>
+
 
 
         <article class="benefit">
@@ -220,16 +266,17 @@
                 ◎
             </div>
 
-            <h3>
+            <h3 data-i18n="benefitTeam">
                 Profesionální tým
             </h3>
 
-            <p>
+            <p data-i18n="benefitTeamText">
                 Zkušení odborníci,
                 kteří vědí, co dělají.
             </p>
 
         </article>
+
 
 
         <article class="benefit">
@@ -238,11 +285,11 @@
                 ⌖
             </div>
 
-            <h3>
+            <h3 data-i18n="benefitEurope">
                 Po celé Evropě
             </h3>
 
-            <p>
+            <p data-i18n="benefitEuropeText">
                 Působíme po celé Evropě, primárně
                 Německo, Rakousko a ČR.
             </p>
@@ -252,6 +299,8 @@
     </div>
 
 </section>
+
+
 
 
 
@@ -267,6 +316,7 @@
     <div class="container about-grid">
 
 
+
        <div class="about-image">
     <div class="image-placeholder">
         <img src="images/logo-original-transparent.png" alt="DP Montbau Group">
@@ -274,26 +324,30 @@
 </div>
 
 
+
         <div class="about-content">
 
-            <p class="eyebrow">
+            <p class="eyebrow" data-i18n="aboutEyebrow">
                 O NÁS
             </p>
 
 
-            <h2>
+
+            <h2 data-i18n="aboutTitle">
                 Jsme DP Montbau Group s.r.o.
             </h2>
 
 
-            <p class="lead">
+
+            <p class="lead" data-i18n="aboutLead">
                 Specializujeme se na stavební
                 a montážní práce, ocelové konstrukce,
                 průmyslové stavby a rekonstrukce.
             </p>
 
 
-            <p>
+
+            <p data-i18n="aboutText">
                 Zakládáme si na kvalitně odvedené práci,
                 spolehlivosti a férovém přístupu.
                 Naším cílem je být partnerem,
@@ -302,9 +356,11 @@
             </p>
 
 
+
             <a
                 class="text-link"
                 href="#kontakt"
+                data-i18n="aboutMore"
             >
                 Více o nás
                 <span>→</span>
@@ -313,15 +369,16 @@
         </div>
 
 
+
         <aside class="about-highlight">
 
             <span class="gold-line"></span>
 
-            <h3>
+            <h3 data-i18n="visionTitle">
                 Naše vize
             </h3>
 
-            <p>
+            <p data-i18n="visionText">
                 Být spolehlivým partnerem,
                 který přináší kvalitní řešení,
                 moderní přístup a dlouhodobou
@@ -340,6 +397,8 @@
 
 
 
+
+
 <!-- ==================================================
      SLUŽBY
 ================================================== -->
@@ -352,22 +411,24 @@
     <div class="container">
 
 
+
         <div class="section-heading">
 
             <div>
 
-                <p class="eyebrow">
+                <p class="eyebrow" data-i18n="servicesEyebrow">
                     NAŠE SLUŽBY
                 </p>
 
-                <h2>
+                <h2 data-i18n="servicesTitle">
                     Co pro vás můžeme udělat?
                 </h2>
 
             </div>
 
 
-            <p>
+
+            <p data-i18n="servicesText">
                 Nabízíme komplexní služby v oblasti
                 stavebnictví a montáží.
                 Přizpůsobíme se vašim potřebám
@@ -378,7 +439,10 @@
 
 
 
+
+
         <div class="service-grid">
+
 
 
             <article class="service-card">
@@ -391,16 +455,16 @@
                         01
                     </span>
 
-                    <h3>
+                    <h3 data-i18n="serviceSteel">
                         Ocelové konstrukce
                     </h3>
 
-                    <p>
+                    <p data-i18n="serviceSteelText">
                         Výroba, montáž a realizace
                         ocelových konstrukcí všech typů.
                     </p>
 
-                    <a href="#kontakt">
+                    <a href="#kontakt" data-i18n="learnMore">
                         Zjistit více
                         <span>→</span>
                     </a>
@@ -408,6 +472,8 @@
                 </div>
 
             </article>
+
+
 
 
 
@@ -421,16 +487,16 @@
                         02
                     </span>
 
-                    <h3>
+                    <h3 data-i18n="serviceIndustrial">
                         Průmyslové stavby
                     </h3>
 
-                    <p>
+                    <p data-i18n="serviceIndustrialText">
                         Výstavba a rekonstrukce
                         výrobních hal, skladů a areálů.
                     </p>
 
-                    <a href="#kontakt">
+                    <a href="#kontakt" data-i18n="learnMore">
                         Zjistit více
                         <span>→</span>
                     </a>
@@ -438,6 +504,8 @@
                 </div>
 
             </article>
+
+
 
 
 
@@ -451,16 +519,16 @@
                         03
                     </span>
 
-                    <h3>
+                    <h3 data-i18n="serviceConstruction">
                         Stavební práce
                     </h3>
 
-                    <p>
+                    <p data-i18n="serviceConstructionText">
                         Základní, hrubé i dokončovací
                         práce a další stavební činnosti.
                     </p>
 
-                    <a href="#kontakt">
+                    <a href="#kontakt" data-i18n="learnMore">
                         Zjistit více
                         <span>→</span>
                     </a>
@@ -468,6 +536,8 @@
                 </div>
 
             </article>
+
+
 
 
 
@@ -481,16 +551,16 @@
                         04
                     </span>
 
-                    <h3>
+                    <h3 data-i18n="serviceAssembly">
                         Montážní práce
                     </h3>
 
-                    <p>
+                    <p data-i18n="serviceAssemblyText">
                         Montáž technologických celků,
                         strojních zařízení a konstrukcí.
                     </p>
 
-                    <a href="#kontakt">
+                    <a href="#kontakt" data-i18n="learnMore">
                         Zjistit více
                         <span>→</span>
                     </a>
@@ -498,6 +568,8 @@
                 </div>
 
             </article>
+
+
 
 
 
@@ -511,16 +583,16 @@
                         05
                     </span>
 
-                    <h3>
+                    <h3 data-i18n="serviceRenovation">
                         Rekonstrukce
                     </h3>
 
-                    <p>
+                    <p data-i18n="serviceRenovationText">
                         Modernizace a opravy objektů,
                         včetně průmyslových areálů.
                     </p>
 
-                    <a href="#kontakt">
+                    <a href="#kontakt" data-i18n="learnMore">
                         Zjistit více
                         <span>→</span>
                     </a>
@@ -530,11 +602,14 @@
             </article>
 
 
+
         </div>
 
     </div>
 
 </section>
+
+
 
 
 
@@ -552,15 +627,15 @@
                 DP MONTBAU GROUP
             </p>
 
-            <h2>
+            <h2 data-i18n="darkCtaTitle">
                 Od prvního návrhu<br>
-                až po realizaci.
             </h2>
 
         </div>
 
 
-        <p>
+
+        <p data-i18n="darkCtaText">
             Kompletní řešení na jednom místě.
             Jeden partner. Jedna odpovědnost.
         </p>
@@ -578,24 +653,26 @@
     <div class="container">
 
 
+
         <div class="section-heading">
 
             <div>
 
-                <p class="eyebrow">
+                <p class="eyebrow" data-i18n="projectsEyebrow">
                     AKTUÁLNÍ ZAKÁZKY
                 </p>
 
-                <h2>
+                <h2 data-i18n="projectsTitle">
                     Hledáme nové kolegy
                 </h2>
 
             </div>
 
 
+
             <div>
 
-                <p>
+                <p data-i18n="projectsText">
                     Podívejte se na naše aktuální
                     pracovní nabídky a zakázky.
                     Možná hledáme právě vás.
@@ -604,6 +681,7 @@
                 <a
                     class="btn btn-red"
                     href="projekty.html"
+                    data-i18n="allProjects"
                 >
                     Všechny zakázky
                     <span>→</span>
@@ -614,12 +692,16 @@
         </div>
 
 
+
         <div
             id="featured-projects"
             class="project-preview-grid"
         >
 
-            <div class="loading">
+            <div
+                class="loading"
+                data-i18n="loadingProjects"
+            >
                 Načítám nabídky…
             </div>
 
@@ -628,6 +710,8 @@
     </div>
 
 </section>
+
+
 
 
 
@@ -640,18 +724,20 @@
     <div class="container stats-grid">
 
 
+
         <div class="stat">
 
             <strong>
                 50+
             </strong>
 
-            <span>
+            <span data-i18n="statProjects">
                 Úspěšně realizovaných
                 projektů
             </span>
 
         </div>
+
 
 
         <div class="stat">
@@ -660,12 +746,13 @@
                 5+
             </strong>
 
-            <span>
+            <span data-i18n="statExperience">
                 Let zkušeností
                 v oboru
             </span>
 
         </div>
+
 
 
         <div class="stat">
@@ -674,7 +761,7 @@
                 100%
             </strong>
 
-            <span>
+            <span data-i18n="statSatisfaction">
                 Spokojených
                 zákazníků
             </span>
@@ -682,13 +769,14 @@
         </div>
 
 
+
         <div class="stat">
 
-            <strong>
+            <strong data-i18n="statEuropeTitle">
                 CELÁ EU
             </strong>
 
-            <span>
+            <span data-i18n="statEurope">
                 Působíme po celé
                 EU, primárně Německo, Rakousko a ČR.
             </span>
@@ -698,6 +786,8 @@
     </div>
 
 </section>
+
+
 
 
 
@@ -713,18 +803,20 @@
     <div class="container reference-grid">
 
 
+
         <div>
 
-            <p class="eyebrow">
+            <p class="eyebrow" data-i18n="referencesEyebrow">
                 REFERENCE
             </p>
 
-            <h2>
+            <h2 data-i18n="referencesTitle">
                 Co o nás říkají
                 naši klienti
             </h2>
 
         </div>
+
 
 
         <div class="reference-content">
@@ -733,7 +825,7 @@
                 “
             </span>
 
-            <blockquote>
+            <blockquote data-i18n="referenceText">
                 Spolupráce s DP Montbau Group
                 byla od začátku profesionální.
                 Dodrželi termíny, kvalita práce
@@ -741,7 +833,7 @@
                 byla výborná.
             </blockquote>
 
-            <p class="reference-author">
+            <p class="reference-author" data-i18n="referenceAuthor">
                 — Jan Novák, jednatel společnosti
             </p>
 
@@ -750,6 +842,8 @@
     </div>
 
 </section>
+
+
 
 
 
@@ -765,18 +859,19 @@
     <div class="container contact-cta-inner">
 
 
+
         <div>
 
-            <p class="eyebrow">
+            <p class="eyebrow" data-i18n="contactCtaEyebrow">
                 MÁTE ZÁJEM O SPOLUPRÁCI?
             </p>
 
-            <h2>
+            <h2 data-i18n="contactCtaTitle">
                 Máte projekt?
                 Ozvěte se nám.
             </h2>
 
-            <p>
+            <p data-i18n="contactCtaText">
                 Neváhejte nás kontaktovat.
                 Rádi pro vás připravíme
                 nezávaznou nabídku.
@@ -785,9 +880,11 @@
         </div>
 
 
+
         <a
             class="btn btn-red"
             href="mailto:info@dpmontbau.cz"
+            data-i18n="contactCtaButton"
         >
             Nezávazná poptávka
             <span>→</span>
@@ -796,6 +893,8 @@
     </div>
 
 </section>
+
+
 
 
 
@@ -808,17 +907,18 @@
     <div class="container contact-grid">
 
 
+
         <div>
 
-            <p class="eyebrow">
+            <p class="eyebrow" data-i18n="contactEyebrow">
                 KONTAKT
             </p>
 
-            <h2>
+            <h2 data-i18n="contactTitle">
                 Spojme se.
             </h2>
 
-            <p>
+            <p data-i18n="contactText">
                 Máte dotaz, plánujete stavbu
                 nebo hledáte spolehlivého
                 partnera pro realizaci?
@@ -828,32 +928,40 @@
         </div>
 
 
+
         <div class="contact-details">
 
             <div>
-                <span>
+
+                <span data-i18n="phoneLabel">
                     Telefon
                 </span>
 
                 <a href="tel:+420797616593">
                     +420 797 616 593
                 </a>
+
             </div>
 
 
+
             <div>
-                <span>
+
+                <span data-i18n="emailLabel">
                     E-mail
                 </span>
 
                 <a href="mailto:info@dp-montbau-group.cz">
                     info@dp-montbau-group.cz
                 </a>
+
             </div>
 
 
+
             <div>
-                <span>
+
+                <span data-i18n="addressLabel">
                     Adresa
                 </span>
 
@@ -863,6 +971,7 @@
                     110 00 Praha<br>
                     Česká republika
                 </p>
+
             </div>
 
         </div>
@@ -875,6 +984,8 @@
 
 
 
+
+
 <!-- ==================================================
      FOOTER
 ================================================== -->
@@ -884,47 +995,50 @@
     <div class="container footer-grid">
 
 
+
         <div class="footer-brand">
 
            <a class="logo" href="index.html">
         <img src="images/logo-white.png" alt="DP Montbau Group">
         </a>
 
-            <p>
+            <p data-i18n="footerText">
                 Stavíme. Montujeme. Tvoříme.
             </p>
 
         </div>
 
 
+
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerLinks">
                 Rychlé odkazy
             </h3>
 
-            <a href="index.html">
+            <a href="index.html" data-i18n="navHome">
                 Úvod
             </a>
 
-            <a href="#o-nas">
+            <a href="#o-nas" data-i18n="navAbout">
                 O nás
             </a>
 
-            <a href="#sluzby">
+            <a href="#sluzby" data-i18n="navServices">
                 Služby
             </a>
 
-            <a href="projekty.html">
+            <a href="projekty.html" data-i18n="navProjects">
                 Zakázky
             </a>
 
         </div>
 
 
+
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerContact">
                 Kontakt
             </h3>
 
@@ -943,9 +1057,10 @@
         </div>
 
 
+
         <div class="footer-column">
 
-            <h3>
+            <h3 data-i18n="footerFollow">
                 Sledujte nás
             </h3>
 
@@ -970,6 +1085,7 @@
     </div>
 
 
+
     <div class="container footer-bottom">
 
         <span>
@@ -978,22 +1094,25 @@
         </span>
 
         <div>
-            <a href="#">
+
+            <a href="#" data-i18n="footerPrivacy">
                 Ochrana osobních údajů
             </a>
 
-            <a href="#">
+            <a href="#" data-i18n="footerCookies">
                 Cookies
             </a>
 
-            <a href="admin.html">
+            <a href="admin.html" data-i18n="footerAdmin">
                 Administrace
             </a>
+
         </div>
 
     </div>
 
 </footer>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
