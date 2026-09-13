@@ -1,10 +1,9 @@
-
 const translations = {
   cs: {
     navHome: "Úvod",
     navAbout: "O nás",
     navServices: "Služby",
-    navProjects: "Realizace",
+    navProjects: "Zakázky",
     navReferences: "Reference",
     navContact: "Kontakt",
     navCta: "Nezávazná poptávka"
@@ -30,3 +29,19 @@ const translations = {
     navCta: "Unverbindliche Anfrage"
   }
 };
+
+
+// Přepínání jazyka
+document.addEventListener("DOMContentLoaded", () => {
+  const languageButtons = document.querySelectorAll("[data-lang]");
+
+  languageButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const language = button.dataset.lang;
+
+      console.log("Přepínám jazyk na:", language);
+
+      localStorage.setItem("language", language);
+    });
+  });
+});
