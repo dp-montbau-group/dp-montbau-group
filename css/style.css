@@ -4950,3 +4950,29 @@ p {
         min-width: 32px;
     }
 }
+
+.service-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.service-image-1 {
+    background-image: url("../images/ocel.jpg");
+}
+
+.service-image-2 {
+    background-image: url("../images/prumysl.jpg");
+}
+
+.service-image-3 {
+    background-image: url("../images/stavba.jpg");
+}
+
+.service-image-4 {
+    background-image: url("../images/montaz.jpg");
+}
+
+.service-image-5 {
+    background-image: url("../images/regal.jpg");
+}
